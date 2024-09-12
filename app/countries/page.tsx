@@ -1,12 +1,12 @@
 "use client"
 import { Sort as DefaultTable} from "./fluenttable"; 
-import { NavDrawerSize as NavSide } from "./fluentnav";
+import { NavDrawerSize as SideNav } from "../../components/fluentnav";
 
 export default function Page() {
     return(
         <>
-            <NavSide />
-            
+            <div>Countries table</div>
+            <DefaultTable />
         </>
     )
 }
