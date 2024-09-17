@@ -58,13 +58,13 @@ export default function Index() {
         styles={itemAlignmentsStackStyles}
       >
         <Stack.Item align="auto" styles={stackItemStyles}>
-          <span><StatsTableCard text={'Players stats'} src={'/images/playerstats.png'}/></span>
+          <span><StatsTableCard text={'Players stats'}/></span>
         </Stack.Item>
         <Stack.Item align="auto" styles={stackItemStyles}>
-          <span><StatsTableCard text={'Teams stats'} src={'/images/test.png'}/></span>
+          <span><StatsTableCard text={'Teams stats'}/></span>
         </Stack.Item>
         <Stack.Item align="auto" styles={stackItemStyles}>
-          <span><StatsTableCard text={'Transfer stats'} src={'/images/transfer.png'}/></span>
+          <span><StatsTableCard text={'Transfer stats'}/></span>
         </Stack.Item>
         <Stack.Item align="auto" styles={stackItemStyles}>
           <span></span>

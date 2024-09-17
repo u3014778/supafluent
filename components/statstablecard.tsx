@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardPreview,
 } from "@fluentui/react-components";
-
+import { PlayerStatsTable } from "./PlayerStatsTable";
 
 const useStyles = makeStyles({
   card: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 });
 
 export const StatsTableCard = (props: {
-  text: string| null | undefined; src: string;
+  text: string| null | undefined
 }) => {
   const styles = useStyles();
   return (
@@ -29,10 +29,7 @@ export const StatsTableCard = (props: {
         header={<Text size={500}>{props.text}</Text>}
       />
       <CardPreview>
-        {<img
-          src={props.src}
-          alt=""
-        />}
+        <PlayerStatsTable/>
       </CardPreview>
     </Card>
   );
