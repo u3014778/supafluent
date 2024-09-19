@@ -9,6 +9,7 @@ import {
   CardPreview,
 } from "@fluentui/react-components";
 import { PlayerStatsTable } from "./PlayerStatsTable";
+import { TeamStatsTable } from "./TeamStatsTable";
 
 const useStyles = makeStyles({
   card: {
@@ -29,7 +30,7 @@ export const StatsTableCard = (props: {
         header={<Text size={500}>{props.text}</Text>}
       />
       <CardPreview>
-        <PlayerStatsTable/>
+        <TeamStatsTable/>
       </CardPreview>
     </Card>
   );
