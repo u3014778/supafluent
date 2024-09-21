@@ -19,51 +19,51 @@ type S1920Cell = {
   label: string;
 };
 
-type TacklesCell = {
+type S2021Cell = {
   label: string;
 };
 
-type PassesCell = {
+type S2122Cell = {
   label: string;
 };
 
-type GoalsCell = {
+type S2223Cell = {
   label: string;
 };
 
-type MinutesCell = {
+type S2324Cell = {
     label: string;
   };
   
 type Item = {
   s1920: S1920Cell;
-  tackles: TacklesCell;
-  passes: PassesCell;
-  goals: GoalsCell;
-  minutes: MinutesCell;
+  s2021: S2021Cell;
+  s2122: S2122Cell;
+  s2223: S2223Cell;
+  s2324: S2324Cell;
 };
 
 const items: Item[] = [
   {
     s1920: { label: "81.85m"},
-    tackles: { label: "125"},
-    passes: { label: "204"},
-    goals: { label: "30"},
-    minutes: {label: "3176"},
+    s2021: { label: "51.6m"},
+    s2122: { label: "118.93m"},
+    s2223: { label: "127.5m"},
+    s2324: { label: "79.65m"},
   },
   {
     s1920: { label: "31.97m"},
-    tackles: { label: "152"},
-    passes: { label: "198"},
-    goals: { label: "36"},
-    minutes: {label: "3234"},
+    s2021: { label: "83.95m"},
+    s2122: { label: "109.9m"},
+    s2223: { label: "144.24m"},
+    s2324: { label: "91.45m"},
   },
   {
     s1920: { label: "56.93m"},
-    tackles: { label: "128"},
-    passes: { label: "193"},
-    goals: { label: "22"},
-    minutes: {label: "3240"},
+    s2021: { label: "51.75m"},
+    s2122: { label: "54.82m"},
+    s2223: { label: "93.73m"},
+    s2324: { label: "59.17m"},
   },
   
 ];
@@ -76,27 +76,27 @@ const columns: TableColumnDefinition<Item>[] = [
     },
   }),
   createTableColumn<Item>({
-    columnId: "tackles",
+    columnId: "s2021",
     compare: (a, b) => {
-      return a.tackles.label.localeCompare(b.tackles.label);
+      return a.s2021.label.localeCompare(b.s2021.label);
     },
   }),
   createTableColumn<Item>({
-    columnId: "passes",
+    columnId: "s2122",
     compare: (a, b) => {
-      return a.passes.label.localeCompare(b.passes.label);
+      return a.s2122.label.localeCompare(b.s2122.label);
     },
   }),
   createTableColumn<Item>({
-    columnId: "goals",
+    columnId: "s2223",
     compare: (a, b) => {
-      return a.goals.label.localeCompare(b.goals.label);
+      return a.s2223.label.localeCompare(b.s2223.label);
     },
   }),
   createTableColumn<Item>({
-    columnId: "minutes",
+    columnId: "s2324",
     compare: (a, b) => {
-      return a.minutes.label.localeCompare(b.minutes.label);
+      return a.s2324.label.localeCompare(b.s2324.label);
     },
   }),
 ];
@@ -131,10 +131,10 @@ export const TransferStatsTable = () => {
       <TableHeader>
         <TableRow>
           <TableHeaderCell {...headerSortProps("s1920")}>19/20</TableHeaderCell>
-          <TableHeaderCell {...headerSortProps("tackles")}>Tackles</TableHeaderCell>
-          <TableHeaderCell {...headerSortProps("passes")}>Passes</TableHeaderCell>
-          <TableHeaderCell {...headerSortProps("goals")}>Goals</TableHeaderCell>
-          <TableHeaderCell {...headerSortProps("minutes")}>Minutes played</TableHeaderCell>
+          <TableHeaderCell {...headerSortProps("s2021")}>20/21</TableHeaderCell>
+          <TableHeaderCell {...headerSortProps("s2122")}>21/22</TableHeaderCell>
+          <TableHeaderCell {...headerSortProps("s2223")}>22/23</TableHeaderCell>
+          <TableHeaderCell {...headerSortProps("s2324")}>23/24</TableHeaderCell>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -147,18 +147,18 @@ export const TransferStatsTable = () => {
             </TableCell>
             <TableCell>
               <TableCellLayout>
-                {item.tackles.label}
+                {item.s2021.label}
               </TableCellLayout>
             </TableCell>
-            <TableCell>{item.passes.label}</TableCell>
+            <TableCell>{item.s2122.label}</TableCell>
             <TableCell>
               <TableCellLayout>
-                {item.goals.label}
+                {item.s2223.label}
               </TableCellLayout>
             </TableCell>
             <TableCell>
               <TableCellLayout>
-                {item.minutes.label}
+                {item.s2324.label}
               </TableCellLayout>
             </TableCell>
           </TableRow>

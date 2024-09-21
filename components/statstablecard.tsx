@@ -10,6 +10,7 @@ import {
 } from "@fluentui/react-components";
 import { PlayerStatsTable } from "./PlayerStatsTable";
 import { TeamStatsTable } from "./TeamStatsTable";
+import { TransferStatsTable } from "./TransferStatsTable";
 
 const useStyles = makeStyles({
   card: {
@@ -20,17 +21,30 @@ const useStyles = makeStyles({
   },
 });
 
+function renderSwitch(param: any) {
+  switch(param) {
+    case 'Players stats':
+      return <PlayerStatsTable/>;
+    case 'Teams stats':
+      return <TeamStatsTable/>;
+    case 'Transfer stats':
+      return <TransferStatsTable/>;
+    default:
+      return undefined;
+  }
+}
 export const StatsTableCard = (props: {
   text: string| null | undefined
 }) => {
   const styles = useStyles();
+  
   return (
     <Card className={styles.card}>
       <CardHeader
         header={<Text size={500}>{props.text}</Text>}
       />
       <CardPreview>
-        <TeamStatsTable/>
+        {renderSwitch(props.text)}
       </CardPreview>
     </Card>
   );
