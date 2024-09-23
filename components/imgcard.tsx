@@ -8,6 +8,8 @@ import {
   CardHeader,
   CardPreview,
 } from "@fluentui/react-components";
+import { RenderLineChart } from "./LineChart";
+import { RenderBarChart } from "./SeasonResultBarChart";
 
 const useStyles = makeStyles({
   card: {
@@ -28,10 +30,7 @@ export const ImgCard = (props: {
         header={<Text size={600}>{props.text}</Text>}
       />
       <CardPreview>
-        <img
-          src={props.src}
-          alt=""
-        />
+        {props.text==='Players growth'? <RenderLineChart/>:<RenderBarChart/>}
       </CardPreview>
     </Card>
   );
