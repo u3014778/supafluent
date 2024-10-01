@@ -10,7 +10,7 @@
     "@fluentui/react-components": "^9.54.7",
     "@fluentui/react-nav-preview": "^0.6.0",
     "@supabase/ssr": "latest",
-    "@supabase/supabase-js": "latest",
+    "@supabase/supabase-js": "^2.45.4",
     "autoprefixer": "10.4.17",
     "geist": "^1.2.1",
     "next": "latest",
